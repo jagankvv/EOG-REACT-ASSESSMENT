@@ -99,9 +99,7 @@ const MeasureChart: React.FC<MeasureChartProps> = ({ metricName }) => {
 
   React.useEffect(() => {
     if (!fetchingList && !fetching && !dataList && data) {
-      if (showChart){
         getMoreData();
-      }
     }
     if (errorList) {
       dispatch(actions.measuresApiErrorReceived({ error: errorList.message }));
