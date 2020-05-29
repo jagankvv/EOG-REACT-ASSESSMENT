@@ -3,8 +3,10 @@ import { withStyles, Theme } from '@material-ui/core/styles';
 
 const styles = (theme: Theme) => ({
   root: {
-    background: theme.palette.primary.main,
-    marginRight: '1rem',
+    display: 'flex',
+      '& > *': {
+        margin: theme.spacing(1),
+      },
   },
 });
 export default withStyles(styles)(Avatar);
