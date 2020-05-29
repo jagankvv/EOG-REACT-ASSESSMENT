@@ -106,7 +106,7 @@ const MeasureChart: React.FC<MeasureChartProps> = ({ metricName }) => {
     if (errorList) {
       dispatch(actions.measuresApiErrorReceived({ error: errorList.message }));
     }
-    if (!fetchingList && dataList?.getMeasurements && !alreadyFilled) {
+    if (!fetchingList && dataList && dataList.getMeasurements && !alreadyFilled) {
       dispatch(
         actions.pushMeasure(
           dataList.getMeasurements.map(
